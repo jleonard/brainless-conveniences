@@ -32,15 +32,100 @@
 
 body{
   font-family: 'Lato', sans-serif;
+  margin: 0;
 }
 
-main{
-  margin: 0 auto;
-  width: 90%;
+#bg{
+  ._(@start,@stop){
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0, @start),
+      color-stop(1, @stop)
+    );
+    background-image: -o-linear-gradient(bottom, @start 0%, @stop 100%);
+    background-image: -moz-linear-gradient(bottom, @start 0%, @stop 100%);
+    background-image: -webkit-linear-gradient(bottom, @start 0%, @stop 100%);
+    background-image: -ms-linear-gradient(bottom, @start 0%, @stop 100%);
+    background-image: linear-gradient(to bottom, @start 0%, @stop 100%);
+  }
+}
+
+// section
+// ------------------------------
+section{
+  padding: 3rem 0;
+  position: relative;
+}
+
+// section : major variation
+// ------------------------------
+section.major{
+  border-top: 3px solid @AQUA;
+  #bg > ._(@NEWSPRINT,white);
+
+  color: @AQUA;
+  height: 75vh;
+  padding: 1rem 6rem;
+
+  > div{
+    #center > .y();
+  }
+  h1{
+    font-weight: 900;
+  }
+  h2{
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: @SLATE;
+  }
+  code{
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+}
+
+section{
+  padding: 1rem 6rem;
+}
+
+a,a:visited{
+  text-decoration: none;
+  &.button{
+    color: @SLATE;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: @SMOKE;
+    border: 1px solid @SILVER;
+    font-weight: bold;
+  }
+}
+
+// typography
+// ------------------------------
+h1{
+  font-size: 4rem;
+  font-weight: 300;
+  span{
+    color:@SLATE;
+  }
 }
 
 h2{
   font-size: 2rem;
+  font-weight: 900;
+}
+
+footer{
+  background-color: @SLATE;
+  color: @AQUA;
+  text-align: center;
+  padding: 3rem;
+  a{
+    color: @AQUA;
+    font-weight: 900;
+  }
 }
 
 [class*='column-']{
