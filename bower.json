@@ -1,0 +1,25 @@
+{
+  "name": "brainless-conveniences",
+  "version": "0.0.0",
+  "authors": [
+    "jleonard <thejohnleonard@gmail.com>"
+  ],
+  "main": "dist/brainless-conveniences.css",
+  "keywords": [
+    "brainless",
+    "less",
+    "css",
+    "css3"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "brainless": "~3.1.0"
+  }
+}
